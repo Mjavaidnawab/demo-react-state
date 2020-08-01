@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './Room.css'
 
 function Room() {
  //const[isLit, setLit] = useState(false) ; 
@@ -35,8 +35,11 @@ function increaseAge(){
   console.log("increaseAge Button Clicked");
   setAge(++age);
 }
+//let hello = 'Hello' + isLit + 'World';
+let hello ='Hello ${isLit} World';
  return (
-      <div>
+   <div className = {"room "+(isLit?"lit":"dark")}>
+     
           This is Room R1 component : Lit = { isLit ? "Lit" : "Dark" }
           This is Room R1 component : Lit = { isLit } 
           This is Room R1 component : Lit = { JSON.stringify(isLit) } 
